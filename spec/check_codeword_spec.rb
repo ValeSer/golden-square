@@ -5,4 +5,9 @@ RSpec.describe 'check_codeword method' do
     result = check_codeword('yellow')
     expect(result).to eq 'WRONG!'
   end
+
+  it 'returns a correct message if given the right codeword' do
+    result = check_codeword('horse')
+    expect(result).to eq 'Correct! Come in.'
+  end
 end
