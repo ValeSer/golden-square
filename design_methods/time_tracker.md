@@ -15,21 +15,22 @@ estimated_time = time_tracker(text)
 3. Create Examples as Tests
 Make a list of examples of what the method will take and return.
 
+
 # 1
+time_tracker('')
+# =>  '0 minutes and 0 seconds'
+
+# 2
 time_tracker('A sentence with five words')
 # => '0 minutes and 1 second'
 
-# 2
+# 3
 time_tracker(...string with 1000 words)
 # =>  '5 minutes'
 
-# 3
+# 4
 time_tracker(...string with 500 words)
 # =>  '2 minutes and 30 seconds'
-
-# 3
-time_tracker('')
-# =>  '0 minutes and 0 seconds'
 
 
 4. Implement the Behaviour
