@@ -12,4 +12,8 @@ RSpec.describe 'time_tracker' do
   it 'returns "5 minutes and 0 seconds" when 1000 words' do
     expect(time_tracker('one ' * 1000)).to eq '5 minutes and 0 seconds'
   end
+
+  it 'returns "2 minutes and 30 seconds" when 500 words' do
+    expect(time_tracker('one ' * 500)).to eq '2 minutes and 30 seconds'
+  end
 end
