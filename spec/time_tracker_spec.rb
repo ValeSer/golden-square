@@ -6,6 +6,7 @@ RSpec.describe 'time_tracker' do
   end
 
   it 'returns "0 minutes and 1 second" when 5 words' do
-    expect(time_tracker('A sentence with five words')).to eq '0 minutes and 1 seconds'
+    expect(time_tracker('A sentence with five words')).to eq '0 minutes and 1 second'
   end
+
 end
