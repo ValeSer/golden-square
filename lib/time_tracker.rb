@@ -8,7 +8,8 @@ def time_tracker(text)
     seconds = (words % 200)* 60 / 200
     if seconds == 1
       return "#{minutes} minutes and #{seconds} second"
-    else return "#{minutes} minutes and #{seconds} seconds"
+    else 
+      return "#{minutes} minutes and #{seconds} seconds"
     end
   end
 end
