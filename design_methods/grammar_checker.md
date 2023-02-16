@@ -25,13 +25,17 @@ grammar_checker('')
 
 # 2
 grammar_checker('we')
-# =>  'We.'
+# =>  'We'
 
 # 3
+grammar_checker('we')
+# =>  'We.'
+
+# 4
 grammar_checker('we are happy to have you here')
 # => 'We are happy to have you here.'
 
-# 4
+# 5
 grammar_checker(45959)
 # =>  raise 'Invalid string'
 
