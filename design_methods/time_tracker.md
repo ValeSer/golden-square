@@ -1,4 +1,4 @@
-{{PROBLEM}} Method Design Recipe
+{{Estimating reading time for text}} Method Design Recipe
 
 1. Describe the Problem
 As a user
