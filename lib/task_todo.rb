@@ -1,3 +1,3 @@
 def task_todo(text)
-  false
+  /#TODO/.match?(text)
 end
