@@ -13,5 +13,21 @@ describe 'task_todo method' do
     expect(task_todo('#TODO')).to eq true
   end
 
-  
+  it 'returns false when #ToDo' do
+  expect(task_todo('#ToDo')).to eq false
+  end  
+
+  it 'returns true when "THIS#TODO"' do
+  expect(task_todo('THIS#TODO')).to eq true
+  end 
+
+  it 'returns true when "Lorem#TODOipsum"' do
+  expect(task_todo('Lorem#TODOipsum')).to eq true
+  end 
+
+  it 'returns false when "TODO"' do
+  expect(task_todo('TODO')).to eq false
+  end 
+
+
 end
