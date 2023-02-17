@@ -5,5 +5,13 @@ describe 'task_todo method' do
     expect(task_todo('')).to eq false
   end
 
+  it 'returns false when #todo' do
+    expect(task_todo('#todo')).to eq false
+  end
 
+  it 'returns true when #TODO' do
+    expect(task_todo('#TODO')).to eq true
+  end
+
+  
 end
