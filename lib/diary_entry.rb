@@ -17,7 +17,7 @@ class DiaryEntry
   end
 
   def reading_time(wpm) 
-    1
+    3
   end
 
   def reading_chunk(wpm, minutes) # `wpm` is an integer representing the number

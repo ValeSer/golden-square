@@ -20,8 +20,9 @@ describe DiaryEntry do
 
   describe '#reading_time' do
     it 'returns reading time in minutes' do
-      diary_entry = DiaryEntry.new('my_title', 'one' * 5)
-      expect(diary_entry.reading_time(5)).to eq 1
+      diary_entry = DiaryEntry.new('my_title', 'one' * 550)
+      expect(diary_entry.reading_time(200)).to eq 3
     end
+
   end
 end
