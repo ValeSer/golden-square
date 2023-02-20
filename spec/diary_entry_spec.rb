@@ -8,9 +8,14 @@ describe DiaryEntry do
   end
 
   describe '#count_words' do
-    it 'Returns the number of words' do
+    it 'Returns 0 with empty contents' do
       diary_entry = DiaryEntry.new('my_title', '')
       expect(diary_entry.count_words).to eq 0
     end
+    it 'Returns 1 with a word in contents' do
+      diary_entry = DiaryEntry.new('my_title', 'Something')
+      expect(diary_entry.count_words).to eq 1
+    end
+
   end
 end
