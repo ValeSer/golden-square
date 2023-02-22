@@ -56,7 +56,7 @@ todo_list.list  # => ['Wash the car', 'Wash the dog']
 todo_list = TodoList.new
 todo_list.add('Wash the car')
 todo_list.add('Wash the car')
-todo_list.list  # => ['Wash the car']
+todo_list.list  # => fails 'Task already there'
 
 #5
 todo_list = TodoList.new

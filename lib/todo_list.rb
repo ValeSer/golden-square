@@ -9,7 +9,8 @@ class TodoList
   end
 
   def add(task)
-    @tasks << task
+    fail 'Task already there' if @tasks.include?(task)
+    @tasks << task 
   end
 
 

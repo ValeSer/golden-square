@@ -16,5 +16,23 @@ describe TodoList do
     end
   end
 
+  context 'given 2 different tasks' do
+    it 'returns two element' do
+      todo_list = TodoList.new
+      todo_list.add('Wash the car')
+      todo_list.add('Wash the dog')
+      expect(todo_list.list).to eq ['Wash the car', 'Wash the dog']
+    end
+  end
+
+  context 'given 2 identical tasks' do
+    it 'fails' do
+      todo_list = TodoList.new
+      todo_list.add('Wash the car')
+      expect { todo_list.add('Wash the car') }.to raise_error 'Task already there'
+    end
+  end
+
+
 
 end
