@@ -14,7 +14,8 @@ class TodoList
   end
 
   def complete(task)
-    if @tasks.include?(task) then @tasks.delete(task) end
+    fail 'No such task' if !@tasks.include?(task) 
+    @tasks.delete(task) 
   end
 
 end

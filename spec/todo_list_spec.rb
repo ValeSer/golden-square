@@ -41,6 +41,12 @@ context 'given a complete task' do
     todo_list.complete('Wash the car')
     expect(todo_list.list).to eq ['Wash the dog']
   end
+
+  it 'fails if passed task does not exist' do
+    todo_list = TodoList.new
+    todo_list.add('Wash the car')
+    expect { todo_list.complete('Wash the cat') }.to raise_error 'No such task'
+  end
 end
 
 
