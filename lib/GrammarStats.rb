@@ -3,9 +3,7 @@ class GrammarStats
   end
 
   def check(text)
-    if text == '' || text != text.capitalize.include?('.')
-      return false
-    end
+    text.match?(/^[A-Z].*[.?!]$/)
   end
 
 
