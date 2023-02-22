@@ -55,11 +55,17 @@ todo_list.list  # => ['Wash the car', 'Wash the dog']
 #4
 todo_list = TodoList.new
 todo_list.add('Wash the car')
+todo_list.add('Wash the car')
+todo_list.list  # => ['Wash the car']
+
+#5
+todo_list = TodoList.new
+todo_list.add('Wash the car')
 todo_list.add('Wash the dog')
 todo_list.complete('Wash the car')
 todo_list.list  # => ['Wash the dog']
 
-#5
+#6
 todo_list = TodoList.new
 todo_list.add('Wash the car')
 todo_list.complete('Wash the cat')
