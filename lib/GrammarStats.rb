@@ -3,7 +3,9 @@ class GrammarStats
   end
 
   def check(text)
-    false
+    if text == '' || text != text.capitalize.include?('.')
+      return false
+    end
   end
 
 
