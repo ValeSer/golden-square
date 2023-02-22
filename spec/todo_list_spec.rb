@@ -17,7 +17,7 @@ describe TodoList do
   end
 
   context 'given 2 different tasks' do
-    it 'returns two element' do
+    it 'returns two elements' do
       todo_list = TodoList.new
       todo_list.add('Wash the car')
       todo_list.add('Wash the dog')
@@ -32,6 +32,17 @@ describe TodoList do
       expect { todo_list.add('Wash the car') }.to raise_error 'Task already there'
     end
   end
+
+context 'given a complete task' do
+  it 'returns an array without that task' do
+    todo_list = TodoList.new
+    todo_list.add('Wash the car')
+    todo_list.add('Wash the dog')
+    todo_list.complete('Wash the car')
+    expect(todo_list.list).to eq ['Wash the dog']
+  end
+end
+
 
 
 

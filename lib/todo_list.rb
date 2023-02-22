@@ -13,5 +13,8 @@ class TodoList
     @tasks << task 
   end
 
+  def complete(task)
+    if @tasks.include?(task) then @tasks.delete(task) end
+  end
 
 end
