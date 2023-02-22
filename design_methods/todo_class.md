@@ -68,8 +68,7 @@ todo_list.list  # => ['Wash the dog']
 #6
 todo_list = TodoList.new
 todo_list.add('Wash the car')
-todo_list.complete('Wash the cat')
-todo_list.list  # => fails 'no such task'
+todo_list.complete('Wash the cat') # => fails 'no such task'
 ```
 4. Implement the Behaviour
 For each example you create as a test, implement the behaviour that allows the class to behave according to your example.
