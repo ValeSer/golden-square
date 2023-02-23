@@ -19,7 +19,7 @@ describe 'Diary integration' do
     end
   end
 
-  describe '#count_words' do
+  describe 'word counting behaviour' do
     it 'counts words in all diary entries contents' do
       diary = Diary.new
       diary_entry1 = DiaryEntry.new('my_title1', 'my contents1')
@@ -30,6 +30,15 @@ describe 'Diary integration' do
     end
 
   end
-
+  describe 'reading time behaviour' do
+    it 'calculates the reading time for all the entries' do
+      diary = Diary.new
+      diary_entry1 = DiaryEntry.new('my title1', 'my contents 1')
+      diary_entry2 = DiaryEntry.new('my title 2', 'my contents 2')
+      diary.add(diary_entry1)
+      diary.add(diary_entry2)
+      expect(diary.reading_time(2)).to eq 3
+    end
+  end
 
 end
