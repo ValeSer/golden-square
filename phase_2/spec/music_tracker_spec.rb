@@ -13,7 +13,7 @@ describe MusicTracker do
       end
   end
 
-  xit 'fails if not a string' do
+  it 'fails if not a string' do
     music_tracker = MusicTracker.new
     expect { music_tracker.add(9) }.to raise_error 'Invalid string'
   end
