@@ -18,4 +18,10 @@ describe MusicTracker do
     expect { music_tracker.add(9) }.to raise_error 'Invalid string'
   end
 
+  it 'adds 1 record' do
+    music_tracker = MusicTracker.new
+    music_tracker.add('record1')
+    expect(music_tracker.list).to eq ['record1']
+  end
+
 end
