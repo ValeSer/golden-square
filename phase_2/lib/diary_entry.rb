@@ -1,3 +1,5 @@
+require 'diary'
+
 class DiaryEntry
   def initialize(title, contents) # title, contents are strings
     @title = title
