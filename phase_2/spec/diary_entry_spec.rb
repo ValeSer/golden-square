@@ -42,7 +42,19 @@ describe DiaryEntry do
         chunk = diary_entry.reading_chunk(2, 1)
         expect(chunk).to eq 'one two'
       end
-
+      it 'returns the second section of content' do
+        diary_entry = DiaryEntry.new("My_title", "one two three")
+        diary_entry.reading_chunk(2,1)
+        result = diary_entry.reading_chunk(2,1)
+        expect(result).to eq "three"
+     end
+     it 'restarts from first part if no more contents' do
+        diary_entry = DiaryEntry.new("My_title", "one two three")
+        diary_entry.reading_chunk(2,1)
+        diary_entry.reading_chunk(2,1)
+        result = diary_entry.reading_chunk(2,1)
+        expect(result).to eq "one two"
+     end
 
     end
 

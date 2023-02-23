@@ -2,6 +2,7 @@ class DiaryEntry
   def initialize(title, contents) # title, contents are strings
     @title = title
     @contents = contents
+    @furthest_word_read = 0
   end
 
   def title
@@ -22,7 +23,17 @@ class DiaryEntry
   end
 
   def reading_chunk(wpm, minutes)
-    @contents
+    words_we_can_read = wpm * minutes
+   
+    if @furthest_word_read > words.length
+      output = words[0, words_we_can_read].join(" ")
+    else
+      start_point = @furthest_word_read
+      end_point  = @furthest_word_read + words_we_can_read
+      output = words[start_point,end_point]
+      @furthest_word_read = end_point
+      return output.join(" ")
+    end
     
   end
 
