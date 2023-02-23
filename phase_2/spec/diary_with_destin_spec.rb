@@ -1,6 +1,6 @@
 #Collaborating with Valeria Serci (GitHub @ValeSer)
 
-require "diary"
+require "diary_with_destin"
 
 
 RSpec.describe DiaryEntry do
