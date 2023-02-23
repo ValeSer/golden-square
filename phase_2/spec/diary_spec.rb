@@ -5,4 +5,5 @@ describe Diary do
     diary = Diary.new
     expect(diary.all).to eq []
   end
+  
 end

@@ -39,6 +39,21 @@ describe 'Diary integration' do
       diary.add(diary_entry2)
       expect(diary.reading_time(2)).to eq 3
     end
+    it 'calculates the reading time when it falls over a minute' do
+      diary = Diary.new
+      diary_entry1 = DiaryEntry.new('my title1', 'my contents')
+      diary_entry2 = DiaryEntry.new('my title 2', 'my contents 2')
+      diary.add(diary_entry1)
+      diary.add(diary_entry2)
+      expect(diary.reading_time(2)).to eq 3
+    end
+
+    it 'fails if wpm is 0' do
+      diary = Diary.new
+      diary_entry = DiaryEntry.new('my title1', 'my contents 1')
+      diary.add(diary_entry)
+      expect { diary.reading_time(0)}.to raise_error "Reading speed must be above zero"
+    end
   end
 
 end
