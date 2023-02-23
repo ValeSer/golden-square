@@ -30,4 +30,11 @@ describe MusicTracker do
     expect { music_tracker.add('record1') }.to raise_error 'Already there!'
   end
 
+  it 'returns a list of records' do
+    music_tracker = MusicTracker.new
+    music_tracker.add('record2')
+    music_tracker.add('record1')
+    expect(music_tracker.list).to eq ['record2', 'record1']
+  end
+
 end
