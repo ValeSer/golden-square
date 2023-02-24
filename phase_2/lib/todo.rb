@@ -1,10 +1,11 @@
 class Todo
-  def initialize(task) # task is a string
-    # ...
+  def initialize(task) 
+    @task = task
   end
 
   def task
-    # Returns the task as a string
+    fail 'Not a string!' if !@task.is_a?(String)
+    @task
   end
 
   def mark_done!
