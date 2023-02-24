@@ -69,5 +69,15 @@ describe 'Diary integration' do
       diary.add(diary_entry)
       expect(diary.find_best_entry_for_reading_time(2, 1)).to eq nil
     end
+
+    it 'returns longest entry user could read in enough time' do
+      diary = Diary.new
+      best_entry = DiaryEntry.new('my title', 'one two')
+      diary.add(DiaryEntry.new('my title', 'one'))
+      diary.add(best_entry)
+      diary.add(DiaryEntry.new('my title', 'one two three'))
+      diary.add(DiaryEntry.new('my title', 'one two three four'))
+      expect(diary.find_best_entry_for_reading_time(2, 1)).to eq best_entry
+    end
  end
 end

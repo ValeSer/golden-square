@@ -21,9 +21,10 @@ class Diary
   end
 
   def find_best_entry_for_reading_time(wpm, minutes)
+    return nil if @entries.empty? 
     readable_entries = @entries.filter do |entry|
       entry.reading_time(wpm) <= minutes
     end
-    return readable_entries.first
+    return readable_entries.sort_by(&:count_words).last
   end
 end
