@@ -6,4 +6,8 @@ describe Diary do
     expect(diary.all).to eq []
   end
   
+  it 'returns nil if no entry' do
+    diary = Diary.new
+    expect(diary.find_best_entry_for_reading_time(2, 1)).to eq nil
+  end
 end

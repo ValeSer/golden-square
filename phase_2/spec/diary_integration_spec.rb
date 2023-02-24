@@ -56,4 +56,18 @@ describe 'Diary integration' do
     end
   end
 
+  describe 'best reading time entry behaviour' do
+    it 'returns 1 entry if 1 passed and enough time' do
+      diary = Diary.new
+      diary_entry = DiaryEntry.new('my title', 'my contents')
+      diary.add(diary_entry)
+      expect(diary.find_best_entry_for_reading_time(2, 1)).to eq diary_entry
+    end
+    it 'returns nil if 1 entry passed and not enough time' do
+      diary = Diary.new
+      diary_entry = DiaryEntry.new('my title', 'my contents longer')
+      diary.add(diary_entry)
+      expect(diary.find_best_entry_for_reading_time(2, 1)).to eq nil
+    end
+ end
 end
