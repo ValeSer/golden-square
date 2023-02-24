@@ -1,5 +1,7 @@
 class TodoList
   def initialize
+    @incomplete_todos = []
+    @complete_todos = []
   end
 
   def add(todo) # todo is an instance of Todo
@@ -7,11 +9,11 @@ class TodoList
   end
 
   def incomplete
-    # Returns all non-done todos
+    @incomplete_todos
   end
 
   def complete
-    # Returns all complete todos
+    @complete_todos
   end
 
   def give_up!

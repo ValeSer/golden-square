@@ -5,7 +5,7 @@ class Todo
 
   def task
     fail 'Not a string!' if !@task.is_a?(String)
-    @task
+    
   end
 
   def mark_done!
