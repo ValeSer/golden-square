@@ -8,12 +8,14 @@ class TodoList
   end
 
   def incomplete
-    @todos
+    @todos.filter do |todo|
+      !todo.done?
+    end
   end
 
   def complete
     @todos.filter do |todo|
-      return todo if todo.done?
+      todo.done?
     end
   end
 
