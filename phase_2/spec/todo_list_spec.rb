@@ -7,9 +7,9 @@ describe TodoList do
   end
   it 'has initially an empty list of incomplete todos' do
     todo_list = TodoList.new
-    expect(todo_list.complete).to eq []
+    expect(todo_list.incomplete).to eq []
   end
-  
+
   
 
 

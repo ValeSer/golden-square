@@ -1,22 +1,25 @@
 class TodoList
   def initialize
-    @incomplete_todos = []
-    @complete_todos = []
+    @todos = []
   end
 
   def add(todo) 
-    @incomplete_todos << todo
+    @todos << todo
   end
 
   def incomplete
-    @incomplete_todos
+    @todos
   end
 
   def complete
-    @complete_todos 
+    @todos.filter do |todo|
+      return todo if todo.done?
+    end
   end
 
   def give_up!
-    # Marks all todos as complete
+    @todos.each do |todo|
+      todo.mark_done!
+    end
   end
 end
