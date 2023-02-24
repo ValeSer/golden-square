@@ -1,20 +1,19 @@
 class Todo
   def initialize(task) 
+    fail 'Invalid string!' if !task.is_a?(String) || task.empty?
     @task = task
-  end
+    @status = false
+   end
 
   def task
-    fail 'Not a string!' if !@task.is_a?(String)
-    
+    @task
   end
 
   def mark_done!
-    # Marks the todo as done
-    # Returns nothing
+    @status = true
   end
 
   def done?
-    # Returns true if the task is done
-    # Otherwise, false
+    return @status
   end
 end
