@@ -1,4 +1,4 @@
-require 'todo_list'
+require 'old_todo_list'
 
 describe TodoList do
   context 'given no tasks' do
