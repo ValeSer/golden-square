@@ -4,8 +4,8 @@ class TodoList
     @complete_todos = []
   end
 
-  def add(todo) # todo is an instance of Todo
-    # Returns nothing
+  def add(todo) 
+    @incomplete_todos << todo
   end
 
   def incomplete
@@ -13,7 +13,7 @@ class TodoList
   end
 
   def complete
-    @complete_todos
+    @complete_todos 
   end
 
   def give_up!
